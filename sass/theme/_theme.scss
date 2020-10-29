@@ -2,6 +2,18 @@
 
 body {
 	font-family: "Lato", sans-serif;
+	color: $primary-text;
+}
+
+.btn {
+	font-weight: 400;
+	text-align: center;
+	border: 1px solid transparent;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	transition: color 0.15s;
 }
 
 #wrapper-navbar {
@@ -39,8 +51,71 @@ body {
 }
 
 .home-banner {
+	padding: 2rem 1rem;
+	display: flex;
+	position: relative;
 	height: 70vh;
 	background-color: $primary;
 	background-image: url("../img/home-banner.jpg");
 	background-size: cover;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.container {
+		display: flex;
+		@media (min-width: 768px) {
+			justify-content: flex-end;
+		}
+	}
+
+	.home-content {
+		z-index: 10;
+		max-width: 500px;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+		h1,
+		h2 {
+			z-index: 10;
+			color: #fff;
+		}
+		h1 {
+			font-weight: 700;
+		}
+		h2 {
+			font-weight: 500;
+		}
+
+		.home-buttons {
+			z-index: 10;
+			display: flex;
+			margin-top: 1rem;
+			.primary-btn,
+			.secondary-btn {
+				color: $primary-text;
+				padding: 0.5rem 1rem;
+				font-size: 1.25rem;
+				line-height: 1.5;
+				border-radius: 0.3rem;
+			}
+
+			.primary-btn {
+				background-color: $primary;
+			}
+
+			.secondary-btn {
+				background-color: $secondary;
+				margin-left: 2rem;
+			}
+		}
+	}
 }

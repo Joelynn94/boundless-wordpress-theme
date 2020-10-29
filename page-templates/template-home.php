@@ -14,7 +14,16 @@ get_header();
 ?>
 
 <div class="home-banner">
-
+  <div class="container">
+    <div class="home-content">
+      <h1>Restore. Shine. Protect</h1>
+      <h2>Premium Auto Detailing and Paint Protection</h2>
+      <div class="home-buttons">
+        <a href="#" class="btn primary-btn">Services</a>
+        <a href="#" class="btn secondary-btn">Request a quote</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <?php
