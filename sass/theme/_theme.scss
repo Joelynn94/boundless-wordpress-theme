@@ -48,6 +48,14 @@ body {
 			}
 		}
 	}
+	.navbar-toggler {
+		.navbar-icon-text {
+			margin-right: 0.25rem;
+			display: inline-block;
+			height: 1.15em;
+			vertical-align: middle;
+		}
+	}
 }
 
 .home-banner {
