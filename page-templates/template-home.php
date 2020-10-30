@@ -14,22 +14,27 @@ get_header();
 
 $title = get_field('banner_heading');
 $subTitle = get_field('banner_subheading');
-$bannerImg = get_field('banner_image')
-
+$image = get_field('banner_image')
 ?>
 
-<div class="home-banner" style="background-image: url(<?php echo $bannerImg; ?>);">
-  <div class="container">
-    <div class="home-content">
-      <h1><?php echo $title ?></h1>
-      <h2><?php echo $subTitle ?></h2>
-      <div class="home-buttons">
-        <a href="#" class="btn primary-btn">Services</a>
-        <a href="#" class="btn secondary-btn">Request a quote</a>
+<?php if($image):?>
+  <div class="home-banner" style="background-image: url(<?php echo $image; ?>);">
+<?php endif;?>
+    <div class="container">
+      <div class="home-content">
+        <?php if($title):?>
+          <h1><?php echo $title ?></h1>
+        <?php endif;?>
+        <?php if($subTitle):?>
+          <h2><?php echo $subTitle ?></h2>
+        <?php endif;?>
+        <div class="home-buttons">
+          <a href="#" class="btn primary-btn">Services</a>
+          <a href="#" class="btn secondary-btn">Request a quote</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 <?php
 get_footer();
