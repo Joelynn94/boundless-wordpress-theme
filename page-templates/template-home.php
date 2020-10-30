@@ -11,13 +11,18 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+
+$title = get_field('banner_heading');
+$subTitle = get_field('banner_subheading');
+$bannerImg = get_field('banner_image')
+
 ?>
 
-<div class="home-banner">
+<div class="home-banner" style="background-image: url(<?php echo $bannerImg; ?>);">
   <div class="container">
     <div class="home-content">
-      <h1>Restore. Shine. Protect</h1>
-      <h2>Premium Auto Detailing and Paint Protection</h2>
+      <h1><?php echo $title ?></h1>
+      <h2><?php echo $subTitle ?></h2>
       <div class="home-buttons">
         <a href="#" class="btn primary-btn">Services</a>
         <a href="#" class="btn secondary-btn">Request a quote</a>
